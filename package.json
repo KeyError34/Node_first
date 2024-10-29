@@ -8,7 +8,11 @@
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["backend", "node", "express"],
+  "keywords": [
+    "backend",
+    "node",
+    "express"
+  ],
   "author": "KeyError34",
   "license": "ISC",
   "dependencies": {

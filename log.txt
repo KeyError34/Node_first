@@ -1,6 +1,14 @@
-2024-10-28T18:17:27.112Z - Second massage
-2024-10-28T18:17:27.107Z - First massage
-2024-10-28T18:17:27.112Z - Third massage
-2024-10-28T18:17:39.532Z - First massage
-2024-10-28T18:17:39.534Z - Second massage
-2024-10-28T18:17:39.534Z - Third massage
+[
+  {
+    "timestamp": "2024-10-29T08:41:26.954Z",
+    "message": "First message"
+  },
+  {
+    "timestamp": "2024-10-29T08:41:26.958Z",
+    "message": "Second message"
+  },
+  {
+    "timestamp": "2024-10-29T08:41:26.971Z",
+    "message": "Third message"
+  }
+]
