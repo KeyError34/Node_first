@@ -13,14 +13,14 @@ async function logMessage(message) {
   let logs = [];
 
   try {
-    // Чтение существующих логов
+    // чтение существующих логов
     const data = await fs.readFile(log, 'utf-8');
     if (data) {
-      logs = JSON.parse(data); // Пробуем прочитать текущие логи как массив
+      logs = JSON.parse(data); // пробуем прочитать текущие логи как массив
     }
   } catch (err) {
     if (err.code === 'ENOENT') {
-      // Если файл не существует, создаем его с пустым массивом
+      // если файл не существует, создаем его с пустым массивом
       logs = [];
       await fs.writeFile(log, JSON.stringify(logs, null, 2));
     } else {
@@ -28,10 +28,10 @@ async function logMessage(message) {
     }
   }
 
-  // Добавляем новый лог
+  // добавляем новый лог
   logs.push({ timestamp, message });
 
-  // Записываем обновленный массив обратно в файл
+  // записываем обновленный массив обратно в файл
   try {
     await fs.writeFile(log, JSON.stringify(logs, null, 2));
   } catch (writeErr) {
@@ -41,7 +41,7 @@ async function logMessage(message) {
 }
 
 async function clearLog() {
-  // Очищаем файл и записываем пустой массив, чтобы JSON оставался корректным
+  // очищаем файл и записываем пустой массив, чтобы JSON оставался корректным
   try {
     await fs.writeFile(log, '[]');
   } catch (err) {
